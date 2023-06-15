@@ -4,6 +4,13 @@
 ## Terraform configuration
 
 terraform {
+  cloud {
+    organization = "terraform-cloud-org1"
+    workspaces {
+      name = "learn-terraform-cloud-migrate"
+    }
+  }
+  
   required_providers {
     random = {
       source  = "hashicorp/random"
